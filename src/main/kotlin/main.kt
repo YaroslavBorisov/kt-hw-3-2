@@ -25,8 +25,8 @@ fun isVKLimitReached(paymentsSum: Int, payment: Int): Boolean {
     return isPaymentsLimitReached(payment, paymentsSum)
 }
 
-private fun isPaymentsLimitReached(payment: Int, paymentsSum: Int, paymentLimit: Int = 15_000, monthlyPaymentsLimit: Int = 40_000): Boolean {
-    return payment > paymentLimit || paymentsSum + payment > monthlyPaymentsLimit;
+fun isPaymentsLimitReached(payment: Int, paymentsSum: Int, paymentLimit: Int = 15_000, monthlyPaymentsLimit: Int = 40_000): Boolean {
+    return payment > paymentLimit || paymentsSum + payment > monthlyPaymentsLimit
 }
 
 fun isCardLimitReached(paymentsSum:Int = 0, payment:Int) : Boolean {
