@@ -2,7 +2,7 @@ fun main() {
     println(calcComission(payment = 80_000))
     println(calcComission("Мир", 10_000,1_000) )
     println(calcComission("Maestro", 60_000,30_000) )
-    println(calcComission("Maestro", 599_000,1_001) )
+    println(calcComission("Maestro", 599_000,1_000) )
 }
 
 
@@ -13,7 +13,7 @@ fun calcComission(cardType:String = "VK Pay", paymentsSum:Int = 0, payment:Int) 
         "Visa", "Мир" -> if (isCardLimitReached(paymentsSum, payment)) -1 else
             Math.max(35, (0.75 * payment / 100).toInt())
         else -> if (isCardLimitReached(paymentsSum, payment)) -1 else
-            if (paymentsSum + payment <= 75_000) 0 else ((paymentsSum + payment - 75_000) * .6 / 100 + 20).toInt()
+            if (paymentsSum + payment <= 75_000) 0 else (Math.min(payment, (paymentsSum + payment - 75_000)) * .6 / 100 + 20).toInt()
     }
 }
 
