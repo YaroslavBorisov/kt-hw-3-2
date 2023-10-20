@@ -25,6 +25,6 @@ fun isPaymentsLimitReached(payment: Int, paymentsSum: Int, paymentLimit: Int = 1
     return payment > paymentLimit || paymentsSum + payment > monthlyPaymentsLimit
 }
 
-fun isCardLimitReached(paymentsSum:Int = 0, payment:Int) : Boolean {
+fun isCardLimitReached(paymentsSum:Int, payment:Int) : Boolean {
     return isPaymentsLimitReached(payment, paymentsSum, 150_000, 600_000)
 }
