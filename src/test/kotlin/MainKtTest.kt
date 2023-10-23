@@ -28,6 +28,13 @@ class MainKtTest {
         assertEquals(110, result)
     }
 
+    @Test
+    fun calcComissionMaestroNormalCalc2() {
+
+        val result = calcComission("Maestro", 80_000,10_000)
+        assertEquals(80, result)
+    }
+
 
     @Test
     fun calcComissionMaestroOverLimit() {
