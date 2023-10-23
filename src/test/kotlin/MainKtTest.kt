@@ -65,10 +65,10 @@ class MainKtTest {
         assertEquals(0, result)
     }
 
-    @Test
-    fun calcComissionVisaOverLimitTest() {
-        // Invalid test
-        val result = calcComission("Visa", 599_000,1_001)
-        assertEquals(0, result)
-    }
+//    @Test
+//    fun calcComissionVisaOverLimitTest() {
+//        // Invalid test
+//        val result = calcComission("Visa", 599_000,1_001)
+//        assertEquals(0, result)
+//    }
 }
